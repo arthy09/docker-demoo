@@ -1,3 +1,4 @@
+
 name: Docker Version Check
 
 on:
@@ -12,11 +13,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
-      - name: Install Docker
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker.io
 
       - name: Check Docker Version
         run: docker --version
